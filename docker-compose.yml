@@ -1,0 +1,19 @@
+version: "3"
+services:
+  node-app:
+    build: .
+    ports: 
+      - "3000:3000"
+    environment: 
+      - PORT=3000
+
+  mongo:
+    image: mongo
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=yash
+      - MONGO_INITDB_ROOT_PASSWORD=yash
+    volumes:
+      - mongo-db:/data/db
+
+volumes:  # list down named volumes 
+  mongo-db: 
