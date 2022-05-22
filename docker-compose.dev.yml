@@ -12,6 +12,7 @@ services:
       - NODE_ENV=development 
       - MONGO_USER=yash
       - MONGO_PASSWORD=yash
+      - SESSION_SECRET=secret
     command: npm run dev  
   mongo:
     image: mongo
